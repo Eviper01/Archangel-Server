@@ -16,7 +16,7 @@ server.listen(port, hostname, () => {
 });
 
 function Ping() {
-console.log("yeets");
+console.log("Yeet");
 spawn.exec('wakeonlan -i 100.98.47.255 2C:F0:5D:07:CD:40');
 
 }
