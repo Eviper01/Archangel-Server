@@ -1,22 +1,14 @@
-const http = require('http');
+const express = require('express');
+const app = new express();
 const spawn = require('child_process');
 
-const hostname = '127.0.0.1';
-const port = 25444;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+app.get('/', function(request, response){
+  response.sendFile("/Users/john/Documents/Archangel-Server/Assets/Ascii_angel.html")
   Ping();
-})
-
-server.listen(port, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+}).listen(25444);
+console.log("Server running on Port 25444");
 
 function Ping() {
-console.log("Yeet");
+console.log("Request Detected: Activating Centurion.");
 spawn.exec('wakeonlan -i 100.98.47.255 2C:F0:5D:07:CD:40');
-
 }
