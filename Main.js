@@ -3,7 +3,7 @@ const app = new express();
 const spawn = require('child_process');
 
 app.get('/', function(request, response){
-  response.sendFile("/Users/john/Documents/Archangel-Server/Assets/Ascii_angel.html")
+  response.sendFile("/home/pi/Archangel-Server/Assets/Ascii_angel.html")
   Ping();
 }).listen(25444);
 console.log("Server running on Port 25444");
