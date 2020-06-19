@@ -15,6 +15,8 @@ sudo raspi-config
 -Enable SSH!!
 
 
-sudo apt-get install nodejs openvpn git -y
+sudo apt-get install nodejs openvpn git npm -y
 
 git clone https://github.com/Eviper01/Archangel-Server.git
+
+npm install express
