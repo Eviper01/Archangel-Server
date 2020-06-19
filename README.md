@@ -19,4 +19,6 @@ sudo apt-get install nodejs openvpn git npm -y
 
 git clone https://github.com/Eviper01/Archangel-Server.git
 
+cd Archangel-Server
+
 npm install express
