@@ -1,5 +1,5 @@
 # Archangel-Server
-#Setup
+# Setup
 Run:
 
 sudo raspi-config
