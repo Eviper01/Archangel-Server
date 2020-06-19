@@ -1,13 +1,20 @@
 # Archangel-Server
-#Setup\n
-Run:\n
+#Setup
+Run:
 
-sudo raspi-config\n
--change password\n
--change hostname\n
--Input Wifi settings\n
--Time Zone\n
--Enable SSH!!\n
+sudo raspi-config
 
-sudo apt-get install nodejs openvpn git -y\n
+-change password
+
+-change hostname
+
+-Input Wifi settings
+
+-Time Zone
+
+-Enable SSH!!
+
+
+sudo apt-get install nodejs openvpn git -y
+
 git clone https://github.com/Eviper01/Archangel-Server.git
