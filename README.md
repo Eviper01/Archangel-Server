@@ -1,3 +1,3 @@
 # Archangel-Server
 
-apt-get install nodejs openvpn -y
+apt-get install nodejs openvpn git -y
