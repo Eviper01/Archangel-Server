@@ -22,5 +22,6 @@ git clone https://github.com/Eviper01/Archangel-Server.git
 cd Archangel-Server
 
 npm install express
+
 #Setup Bluetooth Listening
 sudo apt-get install bluetooth bluez python-bluez -y
