@@ -11,6 +11,13 @@ while True:
     if (recvdata == "Q"):
         print ("Exiting")
         break
+    if (recvdata =="open"):
+        doorOpen()
 
 client_sock.close()
 server_sock.close()
+#need to restart the program when the connection drops
+
+def doorOpen():
+    #do shit with the gpio
+    pass

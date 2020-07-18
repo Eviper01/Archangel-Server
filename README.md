@@ -23,5 +23,7 @@ cd Archangel-Server
 
 npm install express
 
-#Setup Bluetooth Listening
-sudo apt-get install bluetooth bluez python-bluez -y
+run:
+Node Main.js
+put it in the background
+sudo openvpn --config Main.ovpn
