@@ -1,9 +1,24 @@
 import bluetooth
 import RPi.GPIO as GPIO
 import time
-GPIO.setmode(GPIO.BOARD)
+import atexit
+
+def exit_handler():
+    print ("Exiting the program")
+    GPIO.cleanup()
+
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(14,GPIO.OUT)
 GPIO.setup(15,GPIO.OUT)
+
+def doorOpen():
+    GPIO.output(14,True)
+    time.sleep(.5)
+    GPIO.output(15,True)
+    time.sleep(1)
+    GPIO.output(14,False)
+    GPIO.output(15,False)
+
 server_sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
 port = 1
 server_sock.bind(("",port))
@@ -16,18 +31,10 @@ while True:
     if (recvdata == "Q"):
         print ("Exiting")
         break
-    if (recvdata =="open"):
+    if (recvdata[0] =="o"):
         doorOpen()
 
 client_sock.close()
 server_sock.close()
 GPIO.cleanup()
 #need to restart the program when the connection drops
-
-def doorOpen():
-    GPIO.output(14,True)
-    time.sleep(.5)
-    GPIO.output(15,True)
-    time.sleep(1)
-    GPIO.output(14,False)
-    GPIO.output(15,False)
